@@ -8,7 +8,7 @@
             const topicElements = topics.forEach(function(topic, index) {
                 const $header = $('<h2>').addClass('topic-heading').text(topic);
                 const $div = $('<div>').addClass('code').attr('id', topic).append($header);
-                $.get(`studies/${topic}.js`, function (response) {
+                $.get(`./studies/${topic}.js`, function (response) {
                     const split = response.split('\n');
                     const $splitElements = split.map(function(line, index) {
                         const $line = $('<div>').addClass('line');
