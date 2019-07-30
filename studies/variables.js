@@ -75,3 +75,19 @@ const BIRTH_PLACE = 'Manhasset'; //Can't be reassigned but can be manipulated.
      var availableOutsideofBlock = 'foo'; 
      let availableInsideofBlock = 'bar';
  }*/
+ 
+/* HOISTING:
+ *
+ * 0. Before any code is run, javascript brings every var & function declarations to the top of the file
+ * 1. The var declaration loses assigned values from lower in the file
+ * 2. Once you reach the var assignment, you can use that assigned value below it in the file
+ * 3. The fucntion retains its body and can be called anywhere in the file
+ * 4. let & const are not hoisted 
+ */
+
+ // I previously addressed hoisting involving variables in the sections for each variable
+ hello('Matt'); // will print 'Hello my name is Matt.' to the console
+ function hello(name) {
+   console.log('Hello my name is ' + name + '.');
+ }
+ hello('Matt'); // will print 'Hello my name is Matt.' to the console

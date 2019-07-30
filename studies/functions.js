@@ -13,14 +13,14 @@
         console.log('This function has no parameters'); // code that runs when the function is called
     } 
     
-    myFunc(); // Because there are no parameters in the function declaration, we similarly will not have any arguments when the function is called
+    myFunc(); // Because there are no parameters in the function declaration, we similarly will not have any arguments when the function is called and it will print 'This function has no paramters' to the console.
 
  // Function with parameters:
     function myFunc2(param1, param2) {
         console.log(param1 + param2); 
     }
     
-    myFunc2(3, 7); // Function is called with 2 arguments in place of the parameters param1 and param2 that were set in the function declaration.
+    myFunc2(3, 7); // Function is called with 2 arguments in place of the parameters param1 and param2 that were set in the function declaration. It will print 10 to the console.
 
 /* Note that the above examples do not include return statements. That's because,
  * much like parameters are optional, so too are return statements. If a function
@@ -53,9 +53,24 @@
         return result; // result is accessible here becuase it is scoped to the code block
     }
     //return result; // result is not accessible here because parents cannot access children
-    return address; // address is accessible because it was declared globally, outside of the function
+    //return address; // address is accessible because it was declared globally, outside of the function
     
  /* Closures: Functions form closures around the data they house. 
  If an object returned from the Function and is held in memory somewhere (referenced), 
  that closure stays ALIVE, and data can continue to exist in these closures!
  */
+ 
+    function makeMultiplier(x) {
+        return function(y) {
+            return x * y;
+        };
+    }
+
+    var multiply5 = makeMultiplier(5);
+    var multiply10 = makeMultiplier(10);
+
+    console.log(multiply5(2));  // 10
+    console.log(multiply10(2)); // 20
+    
+ 
+ 

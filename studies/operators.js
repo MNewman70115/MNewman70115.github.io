@@ -1,4 +1,10 @@
 /* OPERATORS
+ *
+ * Operators act on our data. They can assign them to a variable or compare them
+ * them or include them in arithmetic operations. Operators are classed by what
+ * they do & how many operands are required. Operands are the values that operators
+ * act on. Unary operators only work with one value, binary with two, ternary with three.
+ *
  * 1. Assignment operators
  * Used to assign a value to a variable*/
     var x = 3 + 7; // the = operator assigns the value of 3 + 7 (10) to the variable x
@@ -29,13 +35,13 @@
 /* 3. Comparison operators
  * Used to compare values, these binary operators always resolve to true or false. 
  * Comparison operators are: */
-    3 > 2; // Greater than (>)
-    2 < 3; // Less than (<)
-    11 >= 10; // Greater than or Equal to (>=)
-    5 <= 5; // Less than or Equal to (<=)
-    5 == '5'; // Equal to (==)
-    6 === 6; // Strictly equal to (===)
-    4 != 5; // Not equal to (!=)
+    3 > 2; // Greater than (>) true
+    2 < 3; // Less than (<) true
+    11 >= 10; // Greater than or Equal to (>=) true
+    5 <= 5; // Less than or Equal to (<=) true
+    5 == '5'; // Equal to (==) true
+    6 === 6; // Strictly equal to (===) true
+    4 != 5; // Not equal to (!=) true
 
 /* 4. Logical operators
  * JavaScript supports three logical operators to denote "and" (&&), "or" (||), 

@@ -1,4 +1,10 @@
-/* Types of data used in JavaScript:
+
+
+
+/* DATATYPES
+    * Datatypes are a type of value in Javascript.  They can be primitive or complex.
+    *
+    * Types of data used in JavaScript:
     * number
     * string
     * boolean
@@ -11,18 +17,18 @@
 */
 
 // 1. numbers
-    56 // This is a number, a numerical value. The main thing we do with numbers is arithmetic, meaning they can be added, subtracted, divided and multiplied. //
-    56.24   // Fractional numbers are written using a dot // 
-    4.65e8  // Exponential numbers are written like this (equates to 4.65 * 10 to the 8th power) //
+    var wholeNumber = 56 // This is a number, a numerical value. The main thing we do with numbers is arithmetic, meaning they can be added, subtracted, divided and multiplied. //
+    var fractionalNumber = 56.24   // Fractional numbers are written using a dot // 
+    var exponentialNumber = 4.65e8  // Exponential numbers are written like this (equates to 4.65 * 10 to the 8th power) //
     
 // 2. strings
-    'Strings are used to represent text' // They are enclosed in 'single quotes', "double quotes", or `back ticks`, which act essentially the same (with a few tricks for back ticks)
+    var string = 'Strings are used to represent text' // They are enclosed in 'single quotes', "double quotes", or `back ticks`, which act essentially the same (with a few tricks for back ticks)
 /* Almost anything can be put in a string
  * Strings cannot be divided, multiplied or subtracted ... 
  * but they can be concatenated (combined) using the + operator */
-    'I ' + 'am ' + 'the ' + 'greatest!' == 'I am the greatest!';
+    var concatenatedString = 'I ' + 'am ' + 'the ' + 'greatest!' //will print to console as 'I am the greatest!';
 // `back tick strings` are called template literals and can embed other values //
-    `Half of 100 is ${100/2}`;
+    var backTickString = `Half of 100 is ${100/2}`;
     
 /* 3. booleans
  * Booleans are a way for JavaScript to say "yes" or "no" using the words true and false. They act like an on/off switch.
@@ -125,4 +131,20 @@ Infinity;
  * the reference to the data help within the collections. Meaning that you can refer to 
  * an object or array by just a one-word variable rather than recalling all of the 
  * data held within.
- */
+ */   
+ 
+ var animal = 'dog';
+ console.log(animal); // will print 'dog' to the console
+ var dog = animal;
+ console.log(dog); //will print 'dog' to the console
+ dog = 'fido';
+ console.log(animal); // will print 'dog' to the console
+ console.log(dog); //will print 'fido' to the console
+ 
+ var numbers = [1, 2, 3, 4 , 5];
+ var alsoNumbers = numbers;
+ console.log(numbers, alsoNumbers); // both will print [1, 2, 3, 4, 5] to the console
+ numbers.push(6);
+ console.log(numbers, alsoNumbers); // both will print [1, 2, 3, 4, 5, 6] to the console
+ alsoNumbers.push(7);
+ console.log(numbers, alsoNumbers); // both will print [1, 2, 3, 4, 5, 6, 7] to the console 
