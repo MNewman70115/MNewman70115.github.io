@@ -106,9 +106,10 @@
  
 /* 10. Infinity and -Infinity 
  * Infinity is an error value that means one of two things happened: either the 
- * programmer attempted to divide a number by zero or a number can't be represented
- * because its magnitude is too large. 
- * Infinity is useful as a default value, ie, if you're looking for a minimum or maximum.
+ * programmer attempted to divide a number by zero or a number can't be 
+ * represented because its magnitude is too large. 
+ * Infinity is useful as a default value, ie, if you're looking for a minimum or 
+ * maximum.
  * Inifinity is larger than any number, with the exception of NaN, and -Inifity
  * is smaller than any number.
  */
@@ -120,15 +121,17 @@ Infinity;
  * undefined and null. They are always immutable, meaning that their properties
  * cannot be changed, added or removed. 
  * Complex data types include arrays and objects, which are collections used to 
- * store other information. Unlike primitives, complex datatypes are mutable, meaning
- * properties can be changed, added and removed. 
+ * store other information. Unlike primitives, complex datatypes are mutable, 
+ * meaning properties can be changed, added and removed. 
  
  */
 
-/* 12. Primitive values are passed to a function BY COPY, complex values are BY REFERENCE. What does that mean, and how are they different?
- * By being passed to a function by copy, primitive values such as strings, numbers and booleans are the actual imutable values
- * used in the function. But complex datatypes, such as objects and arrays use only
- * the reference to the data help within the collections. Meaning that you can refer to 
+/* 12. When primitive values are passed to a function, they are copied BY VALUE.
+ * When complex values are passed to a function, they are copied BY REFERENCE. 
+ * What does that mean, and how are they different?
+ * Primitive values such as strings, numbers and booleans are the actual imutable values
+ * used in the function. But complex datatypes, such as objects and arrays, only
+ * use a reference to the data. Meaning that you can refer to 
  * an object or array by just a one-word variable rather than recalling all of the 
  * data held within.
  */   
